@@ -1,0 +1,290 @@
+/* Custom Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 56px;
+    background-color: #f8f9fa; /* Latar belakang sangat terang */
+}
+
+/* Custom Global Styles */
+
+/* Judul Utama menggunakan font yang sama dengan Brand */
+h1, h2, h3, h4, h5, h6 {
+    /* GANTI FONT INI */
+    font-family: 'Philosopher', serif; 
+    
+    font-weight: 700;
+    color: #145a32; /* Hijau Sangat Tua untuk judul */
+}
+
+/* Styling Judul Bagian */
+.section-title {
+    font-size: 2.8rem;
+    color: #145a32;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Garis Pemisah (Menggunakan warna aksen emas) */
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #f4d03f; /* Kuning Emas Muda */
+    border-radius: 2px;
+}
+
+.section-title-white {
+    font-size: 2.8rem;
+    color: #fff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title-white::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #58d68d; /* Hijau Mint */
+    border-radius: 2px;
+}
+
+/* --- NAVBAR KUSTOM --- */
+.custom-navbar {
+    background-color: #1e8449 !important; /* Hijau Hutan Tua */
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: all 0.4s ease;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Efek saat di-scroll */
+.custom-navbar.scrolled {
+    background-color: rgba(30, 132, 73, 0.95) !important; /* Semi-transparan saat scroll */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* --- Bagian NAVBAR KUSTOM --- */
+
+.custom-brand {
+    /* GANTI FONT INI */
+    font-family: 'Philosopher', serif; 
+    /* ATAU, jika Anda menemukan font display kustom bertema etnik/Batik, ganti di sini */
+    
+    font-size: 1.8rem;
+    font-weight: 700; /* Gunakan 700 (Bold) agar tebal dan jelas */
+    color: #f4d03f !important; /* Kuning Emas Muda */
+    
+    /* Text Shadow yang sudah kita buat sebelumnya */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    
+    /* Tambahkan sedikit spasi antar huruf untuk keterbacaan (Opsional) */
+    letter-spacing: 1px; 
+}
+
+.nav-link {
+    color: #f0fff0 !important; /* Warna putih off-white yang sangat muda */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f4d03f !important; /* Kuning Emas saat hover */
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    min-height: 100vh;
+    background: url('../img/hero-bg.jpg') no-repeat center center / cover;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Overlay gelap */
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* --- CUSTOM BUTTON CTA (Call to Action) --- */
+.custom-btn {
+    background-color: #f4d03f; /* Kuning Emas Aksen */
+    border-color: #f4d03f;
+    color: #145a32; /* Teks hijau tua agar kontras */
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #e5b81c; /* Lebih gelap saat hover */
+    border-color: #e5b81c;
+    color: #145a32; 
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Styling Khusus Gambar di Dalam Kartu Resep --- */
+
+.custom-card-img {
+    height: 220px;
+    object-fit: cover;
+    
+    /* 1. Tambahkan Border Tipis */
+    border: 3px solid #58d68d; /* Hijau Mint Aksen, 3px tebalnya */
+    border-radius: 8px; /* Sudut sedikit melengkung */
+    
+    /* 2. Tambahkan Box Shadow Hijau */
+    /* Parameter: offset-x, offset-y, blur, spread, color */
+    box-shadow: 0 4px 10px rgba(30, 132, 73, 0.4); 
+    
+    /* Tambahkan transisi agar perubahan terlihat halus (opsional, tapi disarankan) */
+    transition: box-shadow 0.3s ease;
+}
+
+/* 3. Efek Hover untuk Gambar (Opsional: Membuatnya lebih dinamis) */
+.custom-card-img:hover {
+    box-shadow: 0 8px 15px rgba(30, 132, 73, 0.6); /* Shadow lebih tebal saat hover */
+    /* Tambahkan sedikit zoom */
+    transform: scale(1.02); 
+}
+
+/* Pastikan kartu juga memiliki overflow: hidden agar gambar tidak keluar dari batas kartu */
+.recipe-card {
+    /* ... kode yang sudah ada ... */
+    overflow: hidden; 
+}
+
+/* Styling Tombol di dalam Card */
+.recipe-card .btn-outline-primary {
+    color: #1e8449; /* Warna teks Hijau Tua */
+    border-color: #1e8449; 
+    font-weight: 600;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.recipe-card .btn-outline-primary:hover {
+    background-color: #1e8449; /* Mengisi dengan Hijau Tua saat hover */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(30, 132, 73, 0.3);
+}
+
+/* --- BAGIAN TENTANG & KONTAK --- */
+#tentang {
+    background-color: #f0fff0; /* Latar belakang hijau sangat muda/putih off-white */
+    padding: 80px 0;
+}
+
+#kontak {
+    background-color: #1e8449; /* Menggunakan warna primer (Hijau Hutan Tua) */
+}
+
+/* General Link Styling (untuk smooth scroll HTML) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* --- Styling Daftar Bahan (List Group) --- */
+
+.list-group-item {
+    border: none;
+    border-left: 5px solid transparent; /* Border default tipis (transparan) */
+    margin-bottom: 8px; /* Jarak antar item */
+    padding: 12px 15px;
+    background-color: #f0fff0; /* Hijau sangat muda */
+    border-radius: 6px;
+    font-weight: 500;
+    transition: border-left 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek Hover untuk Daftar Bahan */
+.list-group-item:hover {
+    border-left: 5px solid #1e8449; /* Border kiri menjadi Hijau Hutan saat hover */
+    background-color: #e6fae6;
+}
+
+/* Penambahan untuk ikon (jika Anda menggunakan ikon) */
+.list-group-item::before {
+    content: '✅'; /* Gunakan Unicode checkmark atau ikon Font Awesome */
+    margin-right: 10px;
+    color: #58d68d; /* Hijau Mint */
+}
+
+/* Styling untuk Blok Info Resep */
+.recipe-info-block {
+    padding: 30px;
+    background-color: #fefcf2; /* Warna Emas sangat muda */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+    border-top: 5px solid #f4d03f; /* Border atas warna Emas Aksen */
+    height: 100%; /* Penting agar tingginya sama dengan kolom gambar */
+}
+/* Styling Langkah Memasak (Ordered List) */
+.row ol {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.row ol li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    /* Memberi aksen hijau pada nomor langkah */
+    color: #145a32; /* Hijau Sangat Tua */
+}
+
+/* Styling untuk teks di dalam list item (membuatnya hitam normal) */
+.row ol li::marker {
+    font-weight: bold;
+    color: #f4d03f; /* Warna Emas Aksen */
+}
+/* --- Tambahkan atau Modifikasi di bootsrap.css Anda --- */
+
+/* Tombol Outline (Ganti Secondary dengan styling yang lebih baik) */
+.btn-outline-secondary {
+    /* Menggunakan warna Hijau Hutan Tua sebagai warna teks dan border default */
+    color: #1e8449; 
+    border-color: #1e8449; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 50px; /* Membuatnya bulat */
+}
+
+.btn-outline-secondary:hover {
+    /* Saat hover, tombol terisi dengan warna Hijau Hutan */
+    background-color: #1e8449;
+    color: #fff;
+    border-color: #1e8449;
+}
